@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name - Portfolio</title>
+
+    <!-- Link to TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link to Lucide CDN for icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-50">
+      <!-- Hero Section -->
+      <section class="min-h-screen flex flex-col justify-center relative px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 mb-4">
+            Hi, I'm <span class="text-blue-600">Jyoti Prakash </span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-gray-600 mb-8">
+            Full Stack Developer crafting exceptional digital experiences
+          </p>
+          <div class="flex gap-4">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+               class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jyoti-prakash-singh-274baa1aa" target="_blank" rel="noopener noreferrer"
+               class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="mailto:jprakash.singh18@gmail.com"
+               class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <i data-lucide="chevron-down" class="text-gray-400"></i>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-2 mb-8">
+            <i data-lucide="user" class="text-blue-600"></i>
+            <h2 class="text-3xl font-bold text-gray-900">About Me</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <p class="text-gray-600 leading-relaxed">
+                I’m a dedicated Azure DevOps Engineer with 3 years of hands-on experience in cloud infrastructure, CI/CD pipeline automation, and containerized deployments. I specialize in leveraging tools like Terraform, Docker, and Kubernetes to build scalable, secure, and cost-efficient cloud solutions. My expertise spans Azure services including App Service, SQL Database, and Key Vault, with a strong focus on implementing DevOps best practices and driving continuous improvement. Certified in Azure Fundamentals (AZ-900), Azure Administrator (AZ-104), and Azure Network Engineer (AZ-700), I’m passionate about delivering impactful cloud solutions and constantly evolving in the ever-changing tech landscape.
+              </p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="font-semibold text-gray-900 mb-4">Core Technologies</h3>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white p-3 rounded shadow-sm">Azure DevOps</div>
+                <div class="bg-white p-3 rounded shadow-sm">Azure Cloud</div>
+                <div class="bg-white p-3 rounded shadow-sm">Terraform</div>
+                <div class="bg-white p-3 rounded shadow-sm">Docker</div>
+                <div class="bg-white p-3 rounded shadow-sm">Kubernetes</div>
+                <div class="bg-white p-3 rounded shadow-sm">CI/CD Pipelines</div>
+                <div class="bg-white p-3 rounded shadow-sm">Git</div>
+                <div class="bg-white p-3 rounded shadow-sm">Prometheus/Graphana</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-2 mb-8">
+            <i data-lucide="code-2" class="text-blue-600"></i>
+            <h2 class="text-3xl font-bold text-gray-900">Projects</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" 
+                alt="Project Preview" 
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Project 1</h3>
+                <p class="text-gray-600 mb-4">
+                  A brief description of the project and the technologies used in its development.
+                </p>
+                <div class="flex gap-2">
+                  <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span>Code</span>
+                  </a>
+                  <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 ml-4">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" 
+                alt="Project Preview" 
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Project 2</h3>
+                <p class="text-gray-600 mb-4">
+                  A brief description of the project and the technologies used in its development.
+                </p>
+                <div class="flex gap-2">
+                  <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span>Code</span>
+                  </a>
+                  <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 ml-4">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-2 mb-8">
+            <i data-lucide="briefcase" class="text-blue-600"></i>
+            <h2 class="text-3xl font-bold text-gray-900">Experience</h2>
+          </div>
+          <div class="space-y-8">
+            <div class="border-l-2 border-blue-600 pl-4">
+              <h3 class="text-xl font-semibold text-gray-900">Technical Specialist</h3>
+              <p class="text-gray-600">Noventiq • 2022 - Present</p>
+              <p class="text-gray-600 mt-2">
+                As an Technical Specialist, I automated infrastructure setup with Terraform, cutting deployment time by 30% and improving consistency. I built CI/CD pipelines in Azure DevOps, managed Docker and Kubernetes deployments for scalability, and optimized cloud resources for cost and performance. I implemented monitoring with Azure Monitor, Prometheus, and Grafana, and automated tasks using PowerShell and Bash. I enhanced security using Azure Key Vault, IAM, and RBAC, and improved code quality and workflows with SonarQube, Linux tools, and GitLab.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's Connect</h2>
+          <p class="text-gray-600 mb-8">
+            I'm always open to discussing new projects and opportunities.
+          </p>
+          <a 
+            href="mailto:jprakash.singh18@gmail.com"
+            class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-white py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto text-center text-gray-600">
+          <p>© <script>document.write(new Date().getFullYear())</script> Jyoti Prakash Singh. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
