@@ -5,36 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jyoti Prakash Singh - Portfolio</title>
 
-    <!-- Link to TailwindCSS CDN -->
+    <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Link to Lucide CDN for icons -->
+    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Smooth Scroll Polyfill for compatibility -->
+    <script>
+      document.documentElement.style.scrollBehavior = "smooth";
+    </script>
   </head>
   <body>
     <div class="min-h-screen bg-gray-50">
+        <!-- 🔧 Navbar: Add this after <body> tag and before Hero Section -->
+        <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-blue-900/80 text-white shadow-sm">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="flex justify-between items-center h-16">
+                <!-- Logo / Name -->
+                <div class="text-xl font-semibold">
+                  Jyoti Prakash Singh
+                </div>
+      
+                <!-- Nav Links -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                  <a href="#home" class="hover:text-blue-300 transition">Home</a>
+                  <a href="#about" class="hover:text-blue-300 transition">About</a>
+                  <a href="#projects" class="hover:text-blue-300 transition">Projects</a>
+                  <a href="#experience" class="hover:text-blue-300 transition">Experience</a>
+                  <a href="#contact" class="hover:text-blue-300 transition">Contact</a>
+                </nav>
+              </div>
+            </div>
+          </header>
+      
       <!-- Hero Section -->
-      <section class="min-h-screen flex flex-col justify-center relative px-4 sm:px-6 lg:px-8">
-        <div class="max-w-5xl mx-auto">
-          <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 mb-4">
-            Hi, I'm <span class="text-blue-600">Jyoti Prakash </span>
-          </h1>
-          <p class="text-xl sm:text-2xl text-gray-600 mb-8">
-            DevOps Engineer building scalable and secure cloud infrastructure
-          </p>
-          <div class="flex gap-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
-              <i data-lucide="github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/jyoti-prakash-singh-274baa1aa" target="_blank" rel="noopener noreferrer"
-               class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
-              <i data-lucide="linkedin"></i>
-            </a>
-            <a href="mailto:jprakash.singh18@gmail.com"
-               class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
-              <i data-lucide="mail"></i>
-            </a>
+      <section id="home" class="min-h-screen flex flex-col justify-center relative px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-white to-indigo-50">        
+        <div class="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-12">
+          <!-- Text Content -->
+          <div class="md:w-2/3">
+            <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 mb-4">
+              Hi, I'm <span class="text-blue-600">Jyoti Prakash</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-600 mb-8">
+              DevOps Engineer building scalable and secure cloud infrastructure
+            </p>
+            <div class="flex gap-4">
+              <a href="https://github.com" target="_blank" class="p-2 text-gray-600 hover:text-blue-600">
+                <i data-lucide="github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/jyoti-prakash-singh-274baa1aa" target="_blank" class="p-2 text-gray-600 hover:text-blue-600">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="mailto:jprakash.singh18@gmail.com" class="p-2 text-gray-600 hover:text-blue-600">
+                <i data-lucide="mail"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile Image -->
+          <div class="md:w-1/3">
+            <img
+               src="1744620655981-1.jpg"
+               alt="Jyoti Prakash"
+               class="rounded-full shadow-lg w-64 h-64 object-cover mx-auto md:mx-0"
+            />
           </div>
         </div>
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -43,7 +78,7 @@
       </section>
 
       <!-- About Section -->
-      <section class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+      <section id="about" class="py-20 bg-gradient-to-r from-white to-gray-100 px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto">
           <div class="flex items-center gap-2 mb-8">
             <i data-lucide="user" class="text-blue-600"></i>
@@ -58,14 +93,14 @@
             <div class="bg-gray-50 p-6 rounded-lg">
               <h3 class="font-semibold text-gray-900 mb-4">Core Technologies</h3>
               <div class="grid grid-cols-2 gap-3">
-                <div class="bg-white p-3 rounded shadow-sm">Azure DevOps</div>
-                <div class="bg-white p-3 rounded shadow-sm">Azure Cloud</div>
-                <div class="bg-white p-3 rounded shadow-sm">Terraform</div>
-                <div class="bg-white p-3 rounded shadow-sm">Docker</div>
-                <div class="bg-white p-3 rounded shadow-sm">Kubernetes</div>
-                <div class="bg-white p-3 rounded shadow-sm">CI/CD Pipelines</div>
-                <div class="bg-white p-3 rounded shadow-sm">Git</div>
-                <div class="bg-white p-3 rounded shadow-sm">Prometheus/Graphana</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">Azure DevOps</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">Azure Cloud</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">Terraform</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">Docker</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">Kubernetes</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">CI/CD Pipelines</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">Git</div>
+                <div class="bg-white p-3 rounded shadow-sm hover:shadow-md transition duration-300">Prometheus/Graphana</div>
               </div>
             </div>
           </div>
@@ -73,55 +108,49 @@
       </section>
 
       <!-- Projects Section -->
-      <section class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <section id="projects" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto">
           <div class="flex items-center gap-2 mb-8">
             <i data-lucide="code-2" class="text-blue-600"></i>
             <h2 class="text-3xl font-bold text-gray-900">Projects</h2>
           </div>
           <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
             <div class="bg-white rounded-lg overflow-hidden shadow-md">
               <img 
                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" 
-                alt="Project Preview" 
+                alt="Project 1 Preview" 
                 class="w-full h-48 object-cover"
               />
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Project 1</h3>
-                <p class="text-gray-600 mb-4">
-                  A brief description of the project and the technologies used in its development.
-                </p>
+                <p class="text-gray-600 mb-4">A brief description of the project and the technologies used in its development.</p>
                 <div class="flex gap-2">
                   <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700">
-                    <i data-lucide="github" class="w-4 h-4"></i>
-                    <span>Code</span>
+                    <i data-lucide="github" class="w-4 h-4"></i><span>Code</span>
                   </a>
                   <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 ml-4">
-                    <i data-lucide="external-link" class="w-4 h-4"></i>
-                    <span>Live Demo</span>
+                    <i data-lucide="external-link" class="w-4 h-4"></i><span>Live Demo</span>
                   </a>
                 </div>
               </div>
             </div>
+            <!-- Project 2 -->
             <div class="bg-white rounded-lg overflow-hidden shadow-md">
               <img 
                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" 
-                alt="Project Preview" 
+                alt="Project 2 Preview" 
                 class="w-full h-48 object-cover"
               />
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Project 2</h3>
-                <p class="text-gray-600 mb-4">
-                  A brief description of the project and the technologies used in its development.
-                </p>
+                <p class="text-gray-600 mb-4">A brief description of the project and the technologies used in its development.</p>
                 <div class="flex gap-2">
                   <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700">
-                    <i data-lucide="github" class="w-4 h-4"></i>
-                    <span>Code</span>
+                    <i data-lucide="github" class="w-4 h-4"></i><span>Code</span>
                   </a>
                   <a href="#" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 ml-4">
-                    <i data-lucide="external-link" class="w-4 h-4"></i>
-                    <span>Live Demo</span>
+                    <i data-lucide="external-link" class="w-4 h-4"></i><span>Live Demo</span>
                   </a>
                 </div>
               </div>
@@ -131,7 +160,7 @@
       </section>
 
       <!-- Experience Section -->
-      <section class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+      <section id="experience" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto">
           <div class="flex items-center gap-2 mb-8">
             <i data-lucide="briefcase" class="text-blue-600"></i>
@@ -142,7 +171,7 @@
               <h3 class="text-xl font-semibold text-gray-900">Technical Specialist</h3>
               <p class="text-gray-600">Noventiq • 2022 - Present</p>
               <p class="text-gray-600 mt-2">
-                As an Technical Specialist, I automated infrastructure setup with Terraform, cutting deployment time by 30% and improving consistency. I built CI/CD pipelines in Azure DevOps, managed Docker and Kubernetes deployments for scalability, and optimized cloud resources for cost and performance. I implemented monitoring with Azure Monitor, Prometheus, and Grafana, and automated tasks using PowerShell and Bash. I enhanced security using Azure Key Vault, IAM, and RBAC, and improved code quality and workflows with SonarQube, Linux tools, and GitLab.
+                As a Technical Specialist, I automated infrastructure setup with Terraform, cutting deployment time by 30% and improving consistency. I built CI/CD pipelines in Azure DevOps, managed Docker and Kubernetes deployments for scalability, and optimized cloud resources for cost and performance. I implemented monitoring with Azure Monitor, Prometheus, and Grafana, and automated tasks using PowerShell and Bash. I enhanced security using Azure Key Vault, IAM, and RBAC, and improved code quality and workflows with SonarQube, Linux tools, and GitLab.
               </p>
             </div>
           </div>
@@ -150,30 +179,27 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <section id="contact" class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto text-center">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's Connect</h2>
-          <p class="text-gray-600 mb-8">
-            I'm always open to discussing new projects and opportunities.
-          </p>
-          <a 
-            href="mailto:jprakash.singh18@gmail.com"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            <i data-lucide="mail" class="w-5 h-5"></i>
-            <span>Get in Touch</span>
+          <p class="text-gray-600 mb-8">I'm always open to discussing new projects and opportunities.</p>
+          <a href="mailto:jprakash.singh18@gmail.com"
+            class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <i data-lucide="mail" class="w-5 h-5"></i><span>Get in Touch</span>
           </a>
         </div>
       </section>
 
       <!-- Footer -->
-      <footer class="bg-white py-8 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-5xl mx-auto text-center text-gray-600">
+      <footer class="bg-blue-950 text-white py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto text-center text-sm text-blue-200">
           <p>© <script>document.write(new Date().getFullYear())</script> Jyoti Prakash Singh. All rights reserved.</p>
         </div>
       </footer>
+
     </div>
 
+    <!-- Lucide Icons Script -->
     <script>
       lucide.createIcons();
     </script>
